@@ -1,38 +1,273 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Martel&family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  background-color: #fff !important;
+}
+/* Insert Record */
+.form-body
+{
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.66);
+  margin: auto;
+  width: fit-content;
+  margin-top: 20vh;
+  padding: 30px;
+}
+.middle-part span
+{
+  font-size: 24px;
+  font-weight: 700;
+}
+.middle-part .input-field
+{
+  font-size: 19px;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.bottom-part .btn-submit
+{
+  font-size: 19px;
+  font-weight: 800;
+  padding: 7px 18px;
+  border-radius: 10px;
+}
+.bottom-part button
+{
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.bottom-part a button
+{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* View Record */
+table , th , td
+{
+  border: 2px solid black !important;
+  margin: auto;
+  /* margin-top: 10vh; */
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table th
+{
+  font-family: 'Unbounded', cursive;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table td
+{
+  font-family: 'Ubuntu', sans-serif;  
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.view th 
+{
+  font-size: 33px;
+  padding: 10px 15px;
+}
+.view i
+{
+  font-size: 20px !important;
+  vertical-align: middle;
   color: white;
+  
+}
+.view .view-btn
+{
+  padding: 6px 10px;
+  width: 100%;
+  height: 100%;
+}
+.view .header h1
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 55px;
+  font-weight: 900;
 }
 
-.App-link {
-  color: #61dafb;
+/* Edit Record */
+.edit table th
+{
+  font-size: 24px;
+  padding: 0 10px;
+}
+.edit .input-edit
+{
+  padding: 5px 10px;
+  font-size: 20px !important;
+  font-weight: 600;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.edit .input-edit:focus
+{
+  background-color: #E5E3E4;
+}
+.edit .submit-btn
+{
+  padding: 7px 20px;
+  border-radius: 5px;
+  font-size: 24px !important;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Login */
+
+.login-part
+{
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  background: linear-gradient(220deg,#3E5151,#DECBA4);
+  color: black;
+}
+.login-body
+{
+  text-align: center;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+  margin-top: 20vh;
+}
+.login-part h6
+{
+  font-family: 'Unbounded', cursive;
+  font-size: 24px;
+  font-weight: 900;
+  padding-right: 10px;
+}
+.login-part .input-field
+{
+  outline: 0;
+  border: none;
+  padding: 5px 10px;
+  font-size: 21px;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+  font-family: 'Ubuntu', sans-serif;
+}
+.login-part .submit-btn
+{
+  background: linear-gradient(90deg,#2193b0,#6dd5ed);
+  padding: 7px 12px;
+  border: none;
+  width: fit-content;
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login-part .submit-btn::before
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 00%;
+  height: 2px;
+  transition: 0.5s ease-out;
+  background-color: black;
+}
+.login-part .submit-btn:hover::before
+{
+  width: 100%;
+}
+.login-part .submit-btn::after
+{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '';
+  width: 00%;
+  height: 2px;
+  transition: 0.5s ease-out;
+  background-color: black;
+}
+.login-part .submit-btn:hover::after
+{
+  width: 100%;
+}
+.register-link
+{
+  font-size: 20px;
+  text-underline-offset: 3px;
+  color: black;
+  transition: 0.5s;
+}
+
+/* Dashboard */
+.dash-img 
+{
+	border: 1px solid black;
+	padding: 20px 40px;
+	border-radius: 10px;
+}
+.dash-img img
+{
+	border-radius: 10%;
+	object-fit: cover;
+}
+.dash
+{	
+	background: linear-gradient(to right,#FBD786,#f7797d);
+	height: 100vh;
+}
+.dash-body
+{
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.dash-content span
+{
+	font-size: 30px;
+	font-weight: 900;
+	margin-right: 10px;
+}
+.dash-content-top , .dash-content-bottom
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dash-btns button
+{
+	padding: 8px 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: #F0F0F0 !important;
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.dash-btns button a 
+{
+	font-size: 26px;
+	text-decoration: none;
+}
+.log-btns a
+{
+	font-size: 26px;
+	text-decoration: none;
+	background-color: #F0F0F0;
+	padding: 8px 20px;
+	border: none;
+	border-radius: 10px;
 }
